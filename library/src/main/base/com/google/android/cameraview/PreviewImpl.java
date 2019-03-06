@@ -16,6 +16,7 @@
 
 package com.google.android.cameraview;
 
+import android.graphics.Bitmap;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.View;
@@ -49,6 +50,8 @@ abstract class PreviewImpl {
     abstract void setDisplayOrientation(int displayOrientation);
 
     abstract boolean isReady();
+
+    abstract Bitmap getBitmap(int width, int height);
 
     protected void dispatchSurfaceChanged() {
         mCallback.onSurfaceChanged();

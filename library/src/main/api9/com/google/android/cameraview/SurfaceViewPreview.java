@@ -17,6 +17,7 @@
 package com.google.android.cameraview;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.v4.view.ViewCompat;
 import android.view.Surface;
 import android.view.SurfaceHolder;
@@ -81,6 +82,11 @@ class SurfaceViewPreview extends PreviewImpl {
     @Override
     boolean isReady() {
         return getWidth() != 0 && getHeight() != 0;
+    }
+
+    @Override
+    Bitmap getBitmap(int width, int height) {
+        return null; // not supported
     }
 
 }

@@ -19,6 +19,7 @@ package com.google.android.cameraview;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -442,6 +443,16 @@ public class CameraView extends FrameLayout {
      */
     public void takePicture() {
         mImpl.takePicture();
+    }
+
+    /**
+     * Get the bitmap of current camera frame shown.
+     *
+     * @param width The desired bitmap width.
+     * @param height The desired bitmap height.
+     */
+    public Bitmap getBitmap(int width, int height) {
+        return mImpl.getBitmap(width, height);
     }
 
     private class CallbackBridge implements CameraViewImpl.Callback {

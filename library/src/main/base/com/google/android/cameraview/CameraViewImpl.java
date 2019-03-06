@@ -16,6 +16,7 @@
 
 package com.google.android.cameraview;
 
+import android.graphics.Bitmap;
 import android.view.View;
 
 import java.util.Set;
@@ -33,6 +34,10 @@ abstract class CameraViewImpl {
 
     View getView() {
         return mPreview.getView();
+    }
+
+    Bitmap getBitmap(int width, int height) {
+        return mPreview.getBitmap(width, height);
     }
 
     /**
