@@ -18,6 +18,7 @@ package com.google.android.cameraview;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.graphics.SurfaceTexture;
 import android.view.Surface;
@@ -99,6 +100,11 @@ class TextureViewPreview extends PreviewImpl {
     @Override
     boolean isReady() {
         return mTextureView.getSurfaceTexture() != null;
+    }
+
+    @Override
+    Bitmap getBitmap(int width, int height) {
+        return mTextureView.getBitmap(width, height);
     }
 
     /**
